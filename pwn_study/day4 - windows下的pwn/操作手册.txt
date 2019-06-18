@@ -1,0 +1,2 @@
+s -a MSVCR100 L?10000000 cmd.exe
+dd system

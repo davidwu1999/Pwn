@@ -1,0 +1,38 @@
+printf(&buf)
+"aaa" -> "aaa"
+printf("%s",&buf)
+call printf
+esp -> %s
+esp+4 -> buf_addr
+call printf
+清栈 add esp,8 ; ret
+call elf_frame_header -> 下一条指令的地址放入栈顶
+
+
+
+进入printf的时候
+ret_addr
+buf_addr
+
+第一步 -> printf("%s",buf_addr)
+%s，buf_addr
+ebp
+ebp
+ret_addr
+buf_addr
+
+第二步 -> printf("%s",buf_addr)
+%s，buf_addr
+ebp -> %s
+ebp -> buf_addr
+ret_addr
+buf_addr
+
+第三步 -> call printf
+%s，buf_addr
+ebp -> %s
+ebp -> buf_addr
+ret_addr
+buf_addr
+
+第四步 -> 清除printf返回的栈空间

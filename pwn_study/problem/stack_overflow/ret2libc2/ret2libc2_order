@@ -1,0 +1,6 @@
+ROPgadget --binary rop  --only 'pop|ret' | grep 'eax'
+ROPgadget --binary rop  --only 'pop|ret' | grep 'ebx'
+ROPgadget --binary rop  --string '/bin/sh' 
+ROPgadget --binary rop  --only 'int'
+
+

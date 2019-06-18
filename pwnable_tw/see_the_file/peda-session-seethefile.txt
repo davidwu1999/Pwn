@@ -1,0 +1,6 @@
+break *0x08048ACB
+break *0x08048B0F
+
+
+
+

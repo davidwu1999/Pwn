@@ -1,0 +1,1 @@
+ROPgadget --binary rop  --only 'pop|ret' | grep 'eax'
