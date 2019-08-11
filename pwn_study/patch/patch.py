@@ -18,10 +18,8 @@ def patch_call(target,begin,arch = "amd64"):
 	print "E8" + res
 	print hex(order)
 
-patch_call(0x7B10,0x26BA)
-patch_call(0x2200,0x7B10)
-patch_call(0x7700,0x2A7A)
-patch_call(0x243A,0x7706)
+patch_call(0x080485A0,0x08048475)
+patch_call(0x08048310,0x080485A8)
 #0x4018de
 #0x401f8c
 #0x401f74
